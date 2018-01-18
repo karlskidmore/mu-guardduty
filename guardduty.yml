@@ -1,0 +1,38 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "AWS GuardDuty Automation"
+Parameters:
+  ThreatIntelSetUrl:
+    Type: String
+    Description: Url for ThreatIntelSet
+  IpSetUrl:
+    Type: String
+    Description: Url for IpSet
+Resources:
+  GuardDutyDetector:
+    Type: AWS::GuardDuty::Detector
+    Properties:
+      Enable: true
+  GuardDutyThreatIntelSet:
+    Type: AWS::GuardDuty::ThreatIntelSet
+    Properties:
+      Activate: true
+      DetectorId: 
+        Ref: GuardDutyDetector
+      Format: TXT
+      Location: 
+        Ref: ThreatIntelSetUrl
+  GuardDutyIpSet:
+    Type: AWS::GuardDuty::IPSet
+    Properties:
+      Activate: true
+      DetectorId: 
+        Ref: GuardDutyDetector
+      Format: TXT
+      Location: 
+        Ref: IpSetUrl
+Outputs:
+  GuardDutyDetector:
+    Description: GuardDuty Detector ID
+    Value:
+      Ref: GuardDutyDetector
