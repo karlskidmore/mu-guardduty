@@ -1,0 +1,20 @@
+Resources:
+  CloudFormationRole:
+    Properties:
+      Policies:
+      - PolicyName: deploy-guardduty
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Action:
+            - guardduty:*
+            Resource: '*'
+            Effect: Allow
+          - Action:
+            - iam:CreateServiceLinkedRole
+            - iam:PutRolePolicy
+            Resource: 'arn:aws:iam::*:role/aws-service-role/guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDuty*'
+            Condition:
+              StringLike:
+                iam:AWSServiceName: guardduty.amazonaws.com
+            Effect: Allow
