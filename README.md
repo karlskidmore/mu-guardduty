@@ -14,3 +14,6 @@ parameters:
 extensions:
 - url: https://github.com/stelligent/mu-guardduty/archive/v0.2.zip
 ```
+
+# Pricing
+Amazon GuardDuty is priced along two dimensions. The dimensions are based on the quantity of AWS CloudTrail Events analyzed (per 1,000,000 events) and the volume of Amazon VPC Flow Log and DNS Log data analyzed (per GB). For more information, see [Amazon GuardDuty Pricing](https://aws.amazon.com/guardduty/pricing/).
