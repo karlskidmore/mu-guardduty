@@ -17,7 +17,7 @@ extensions:
 A ThreatIntelSet consists of known malicious IP addresses. You can provide a list of these IP Addresses in a TXT file. An IP set is a list of trusted IP addresses that have been whitelisted for secure communication with your AWS environment. You can provide a list of these IP Addresses in a TXT file. 
 
 # Scope and Lifecycle
-This extension runs outside the scope of a deployment pipeline when the environment is provisioned. This means you cannot simply commit new code for mu to integrate this extension into your environment. Instead, you need to run mu from the command line to upsert the environment. To do this you need to get a list of environments: 
+This extension runs outside the scope of a deployment pipeline when the environment is provisioned. This means you cannot simply commit new code to your repository for mu to integrate this extension into your environment. Instead, you need to run mu from the command line to upsert the environment. To do this you need to get a list of environments: 
 
 `mu env list`
 
