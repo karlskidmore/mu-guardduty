@@ -1,5 +1,5 @@
 # mu-guardduty
-[mu](https://github.com/stelligent/mu) extension for [Amazon GuardDuty](https://aws.amazon.com/guardduty/). For more information on how to use mu, see the mu [QuickStart](https://github.com/stelligent/mu/wiki/Quickstart).
+[mu](https://github.com/stelligent/mu) extension for [Amazon GuardDuty](https://aws.amazon.com/guardduty/). For more information on how to use mu, see the mu [QuickStart](https://github.com/stelligent/mu/wiki/Quickstart). To learn how to use mu extensions, read: [Create extensions for the mu DevOps on AWS framework](https://stelligent.com/2018/01/31/create-extensions-for-the-mu-devops-on-aws-framework/).
 
 Sample usage: 
 
