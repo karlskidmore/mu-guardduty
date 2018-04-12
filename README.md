@@ -21,7 +21,9 @@ This extension runs outside the scope of a deployment pipeline when the environm
 
 `mu env list`
 
-Based on this list, you will upsert the environment so that mu merges the changes from this GuardDuty extension to the environment that is defined outside the pipeline. Here's an example:
+This will provide a list of environments managed by mu in your AWS account. 
+
+If you need to run this extension against an existing environment, you can upsert the environment so that mu merges the changes from this GuardDuty extension to the environment that is defined outside the pipeline. Here's an example:
 
 `mu env up <environment_name>`
 
